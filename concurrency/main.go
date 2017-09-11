@@ -39,7 +39,7 @@ func run() {
 	}
 }
 
-
+// process with the data
 func send(object interface{}) interface{} {
 	input := object.(string)
 	sleepNumber := rand.Intn(5)
@@ -49,7 +49,7 @@ func send(object interface{}) interface{} {
 	return output
 }
 
-// deal with the response
+// process with the response
 func callback(resp interface{}, err error) {
 	res := resp.(string)
 	if err != nil {
