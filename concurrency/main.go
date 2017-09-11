@@ -16,11 +16,11 @@ func main() {
 }
 
 func myhandle(w http.ResponseWriter, r *http.Request) {
-	go consume()
+	go run()
 	w.Write([]byte("running some worker"))
 }
 
-func consume() {
+func run() {
 	var urls []string
 	// make some url list
 	for i := 1; i <= 100; i++ {
@@ -39,6 +39,7 @@ func consume() {
 	}
 }
 
+
 func send(object interface{}) interface{} {
 	input := object.(string)
 	sleepNumber := rand.Intn(5)
@@ -48,6 +49,7 @@ func send(object interface{}) interface{} {
 	return output
 }
 
+// deal with the response
 func callback(resp interface{}, err error) {
 	res := resp.(string)
 	if err != nil {
