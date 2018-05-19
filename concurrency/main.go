@@ -1,13 +1,14 @@
 package main
 
 import (
-	"strconv"
 	"fmt"
-	"github.com/jeffail/tunny"
-	"time"
-	"math/rand"
 	"log"
+	"math/rand"
 	"net/http"
+	"strconv"
+	"time"
+
+	"github.com/jeffail/tunny"
 )
 
 func main() {
